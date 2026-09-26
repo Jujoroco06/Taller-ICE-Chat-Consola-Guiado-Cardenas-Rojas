@@ -12,7 +12,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 
 
-public class ChatRoomI {
+public class ChatRoomI implements ChatApp.ChatRoom{
     private final Set <String> onlineUsers = ConcurrentHashMap.newKeySet () ;
     private final List <ChatMessage> messageHistory = new CopyOnWriteArrayList<>() ;
     private final AtomicLong messageIdCounter = new AtomicLong (0) ;
