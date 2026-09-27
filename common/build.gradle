@@ -8,7 +8,7 @@ task compileSlice (type:Exec){
         file ("src/main/java").mkdirs ()
     }
 // Invoca la utilidad nativa slice2java de ZeroC
-    commandLine 'slice2java', '--output - dir' , 'src/main/java' , 'src/main/slice/Chat.ice'
+    commandLine 'slice2java', '--output-dir' , 'src/main/java' , 'src/main/slice/Chat.ice'
 }
 // Asegura que Java dependa de la generacion previa del codigo de Slice
-compileJava . dependsOn compileSlice
+compileJava.dependsOn compileSlice

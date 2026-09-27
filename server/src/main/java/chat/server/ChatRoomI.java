@@ -61,7 +61,7 @@ public class ChatRoomI implements ChatApp.ChatRoom{
                 pending.add(msg) ;
             }
         }
-        return pending.toArray(newChatMessage[0]) ;
+        return pending.toArray(new ChatMessage[0]) ;
     }
     @Override
     public String [] getOnlineUsers ( Current current ) {

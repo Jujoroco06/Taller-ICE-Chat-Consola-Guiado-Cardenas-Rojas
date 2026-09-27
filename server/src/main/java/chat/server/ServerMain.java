@@ -14,7 +14,7 @@ public class ServerMain {
                     "ChatAdapter", "default -p 10000");
 
             // 2. Instanciar el Servant y registrarlo con identidad 'ChatService'
-            ChatRoom servant = new ChatRoom();
+            ChatRoomI servant = new ChatRoomI();
             adapter.add(servant, Util.stringToIdentity("ChatService"));
 
             // 3. Activar el adaptador para recibir llamadas RPC
